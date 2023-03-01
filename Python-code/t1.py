@@ -1,16 +1,16 @@
-class solution:
-    def isp(self,x:int) -> bool:
-        s = str(x)
-        print(s)
+'''
+1. 两数之和
+这道题暴力解法一个个的相加判断
 
-        s1 = s[::-1]
-        print(s1)
+'''
 
-        if s1==s:
-            return True
-        else:
-            return False
+# 如下为我leetcode提交代码
 
-s = solution()
-a= s.isp(-121)
-print(a)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        n = len(nums)
+        for i in range(0,len(nums)):
+            for j in range(i+1,n):
+                if (nums[i]+nums[j]==target):
+                    a = [i,j]
+                    return a
